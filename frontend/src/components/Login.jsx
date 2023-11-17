@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useState } from 'react';
 import * as auth from '../utils/auth';
 import { useNavigate } from 'react-router-dom';

@@ -13,19 +13,14 @@ const {
   cardLikeValidation,
 } = require('../routeValidation/cards');
 
-
 router.get('/', getCards);
 
-router.post(
-  '/', cardCreateValidation, createCard);
+router.post('/', cardCreateValidation, createCard);
 
-router.delete(
-  '/:cardId', cardDeleteValidation, deleteCard);
+router.delete('/:cardId', cardDeleteValidation, deleteCard);
 
-router.put(
-  '/:cardId/likes', cardLikeValidation, likeCard);
+router.put('/:cardId/likes', cardLikeValidation, likeCard);
 
-router.delete(
-  '/:cardId/likes', cardDislikeValidation, dislikeCard);
+router.delete('/:cardId/likes', cardDislikeValidation, dislikeCard);
 
 module.exports = router;

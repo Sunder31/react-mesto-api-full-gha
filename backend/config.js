@@ -5,4 +5,6 @@ const {
   NODE_ENV = 'production',
 } = process.env;
 
-module.exports = { PORT, MONGO_DB, JWT_SECRET, NODE_ENV };
+module.exports = {
+  PORT, MONGO_DB, JWT_SECRET, NODE_ENV,
+};

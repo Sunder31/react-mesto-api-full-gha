@@ -1,14 +1,22 @@
 import { Link, useNavigate } from 'react-router-dom';
+import * as auth from '../utils/auth';
 
 function MainHeader({userData, setLoggedIn}) {
 
     const navigate = useNavigate();
 
     const handleSignOut = () => {
-        localStorage.removeItem('token');
-        setLoggedIn(false);
-        navigate('/signin', { replace: true });
-      }
+        auth
+         .logout()
+         .then(() => {
+            localStorage.removeItem('isLoggedIn');
+            setLoggedIn(false);
+            navigate('/signin', { replace: true });
+         })
+         .catch((err) => {
+            console.error(`${err} ${err.message}`);
+         });
+      };
 
     return (
         <header className="header">

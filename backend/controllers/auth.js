@@ -35,9 +35,10 @@ const login = (req, res, next) => {
     .then((user) => {
       const token = jwt.sign(
         { _id: user._id },
-        NODE_ENV === 'production' ?
-        JWT_SECRET : 'dev-secret',
-        { expiresIn: '7d' });
+        NODE_ENV === 'production'
+          ? JWT_SECRET : 'dev-secret',
+        { expiresIn: '7d' },
+      );
 
       res
         .cookie('jwt', token, {
@@ -55,7 +56,12 @@ const login = (req, res, next) => {
     .catch(next);
 };
 
+const logout = (req, res) => {
+  res.clearCookie('jwt').send({ message: 'Выход из аккаунта' });
+};
+
 module.exports = {
   createUser,
   login,
+  logout,
 };

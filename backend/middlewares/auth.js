@@ -2,6 +2,7 @@ const jwt = require('jsonwebtoken');
 const UnauthorizedError = require('../errors/UnauthorizedError');
 const { JWT_SECRET } = require('../config');
 
+// eslint-disable-next-line consistent-return
 const auth = (req, res, next) => {
   const token = req.cookies.jwt;
 

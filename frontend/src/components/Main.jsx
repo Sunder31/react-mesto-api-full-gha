@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useContext } from "react"
 import Card from './Card.jsx'
 import { CurrentUserContext } from '../contexts/CurrentUserContext'

@@ -42,4 +42,17 @@ export const checkToken = () => {
     }).then((res) => {
         return getResData(res);
     });
+    
 }
+
+export const logout = () => {
+    return fetch(`${BASE_URL}logout `, {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    }).then((res) => {
+        return getResData(res);
+    });
+};

@@ -42,7 +42,7 @@ function App() {
             auth.checkToken()
                 .then((res) => {
                     if(res){
-                        setUserEmail(res.data.email)
+                        setUserEmail(res.email);
                         setLoggedIn(true)
                         navigate('/', {replace: true})
                     }
@@ -125,7 +125,7 @@ function App() {
     }
 
     const handleCardLike = (card) => {
-        const isLiked = card.likes.some((item) => item._id === currentUser._id);
+        const isLiked = card.likes.some((itemid) => itemid === currentUser._id);
         
         api.changeLikeCardStatus(card._id, !isLiked)
           .then((newCard) => {

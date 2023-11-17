@@ -65,7 +65,6 @@ const getUserInfo = (req, res, next) => {
     .catch(next);
 };
 
-
 module.exports = {
   getUsers,
   getCurrentUser,
