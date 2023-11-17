@@ -106,9 +106,8 @@ class Api {
 
 
 const api = new Api ({
-    baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-72',//сюда ссылку api от ВМ
+    baseUrl: 'https://api.sunder.mesto.nomoredomainsmonster.ru',
     headers: {
-        // authorization: '506c723b-3b50-4120-bc2e-27b20195cd7b',(удалить?)
         'Content-Type': 'application/json',
     },
 })

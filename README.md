@@ -9,8 +9,8 @@
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 158.160.24.252
 
-Frontend https://...
+Frontend https://sunder.mesto.nomoredomainsmonster.ru/
 
-Backend https://...
+Backend https://api.sunder.mesto.nomoredomainsmonster.ru/

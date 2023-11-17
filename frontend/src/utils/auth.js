@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:5173/';//сюда ссылку api
+export const BASE_URL = 'https://api.sunder.mesto.nomoredomainsmonster.ru/';
 
 const getResData = (res) => {
     if (res.ok) {
@@ -32,13 +32,12 @@ export const authorize = (email, password) => {
     });
 }
 
-export const checkToken = () => { // принимает token если не удалять авторизацию
+export const checkToken = () => {
     return fetch(`${BASE_URL}users/me`, {
         method: 'GET',
         credentials: 'include',
         headers: {
             'Content-Type': 'application/json',
-            // Authorization: `Bearer ${token}`, удалить?
         },
     }).then((res) => {
         return getResData(res);

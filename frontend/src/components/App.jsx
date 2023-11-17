@@ -36,10 +36,10 @@ function App() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const token = localStorage.getItem('token')
+        const isLoggedIn = localStorage.getItem('isLoggedIn')
 
-        if(token){
-            auth.checkToken(token)
+        if(isLoggedIn){
+            auth.checkToken()
                 .then((res) => {
                     if(res){
                         setUserEmail(res.data.email)

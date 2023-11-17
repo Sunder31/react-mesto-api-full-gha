@@ -14,10 +14,10 @@ mongoose.connect(MONGO_DB);
 
 const app = express();
 
-// app.use(cors({
-//   credentials: true,
-//   origin: 'http://localhost:5173/' //сюда основную
-// }));
+app.use(cors({
+  credentials: true,
+  origin: 'https://sunder.mesto.nomoredomainsmonster.ru',
+}));
 
 app.use(helmet());
 
