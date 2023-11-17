@@ -106,7 +106,7 @@ class Api {
 
 
 const api = new Api ({
-    baseUrl: 'api.sunder.mesto.nomoredomainsmonster.ru',
+    baseUrl: 'https://api.sunder.mesto.nomoredomainsmonster.ru',
     headers: {
         'Content-Type': 'application/json',
     },
