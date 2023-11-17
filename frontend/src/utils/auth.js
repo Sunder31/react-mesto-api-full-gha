@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://localhost:3000/';
+export const BASE_URL = 'api.sunder.mesto.nomoredomainsmonster.ru/';
 
 const getResData = (res) => {
     if (res.ok) {
