@@ -37,11 +37,15 @@ function App() {
 
     useEffect(() => {
         const isLoggedIn = localStorage.getItem('isLoggedIn')
-
+        console.log(isLoggedIn)
         if(isLoggedIn){
+
             auth.checkToken()
                 .then((res) => {
+                    console.log(res)
+                    console.log(res.email)
                     if(res){
+                        console.log(res)
                         setUserEmail(res.email);
                         setLoggedIn(true)
                         navigate('/', {replace: true})
@@ -51,6 +55,7 @@ function App() {
                     console.error(`${err} ${err.message}`)
                 })
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     useEffect(() => {
@@ -129,6 +134,7 @@ function App() {
         
         api.changeLikeCardStatus(card._id, !isLiked)
           .then((newCard) => {
+            
             setCards((state) =>
               state.map((c) => (c._id === card._id ? newCard : c))
             );

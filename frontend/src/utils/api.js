@@ -106,8 +106,9 @@ class Api {
 
 
 const api = new Api ({
-    baseUrl: 'https://api.sunder.mesto.nomoredomainsmonster.ru',
+    baseUrl: 'https://localhost:3000',
     headers: {
+        authorization: '506c723b-3b50-4120-bc2e-27b20195cd7b',
         'Content-Type': 'application/json',
     },
 })

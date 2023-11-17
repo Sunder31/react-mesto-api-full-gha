@@ -31,7 +31,6 @@ function Register({ setInfoTooltipOpen, setInfoTooltipData }) {
     auth
       .register(email, password)
       .then((res) => {
-        console.log(res)
         setFormValues({
           email: '',
           password: '',
